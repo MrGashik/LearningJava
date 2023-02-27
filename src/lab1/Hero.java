@@ -1,23 +1,24 @@
 package lab1;
 
 import lab1.strategy.*;
+
 public class Hero {
     private MoveStrategy moveStrategy;
     private int currentPosition;
 
-    {
-        currentPosition = 0;
-        moveStrategy = new StrategyWalk();
-        System.out.println(moveStrategy.heroStatus());
+    Hero(MoveStrategy initialMoveStrategy) {
+        this.currentPosition = 0;
+        this.moveStrategy = initialMoveStrategy;
+        System.out.println(this.moveStrategy.heroStatus());
     }
 
     public void changeStrategyMove(MoveStrategy strategy) {
-        moveStrategy = strategy;
-        System.out.println(moveStrategy.heroStatus());
+        this.moveStrategy = strategy;
+        System.out.println(this.moveStrategy.heroStatus());
     }
 
     public void move() {
-        currentPosition += moveStrategy.move();
-        System.out.println("The hero is at " + currentPosition + " points.\n");
+        this.currentPosition += this.moveStrategy.move();
+        System.out.println("The hero is at " + this.currentPosition + " points.\n");
     }
 }
