@@ -19,6 +19,6 @@ public class Hero {
 
     public void move() {
         this.currentPosition += this.moveStrategy.move();
-        System.out.println("The hero is at " + this.currentPosition + " points.\n");
+        System.out.println("The hero overcame " + this.currentPosition + " meters.\n");
     }
 }
