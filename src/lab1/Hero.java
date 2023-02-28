@@ -6,7 +6,7 @@ public class Hero {
     private MoveStrategy moveStrategy;
     private int currentPosition;
 
-    Hero(MoveStrategy initialMoveStrategy) {
+    public Hero(MoveStrategy initialMoveStrategy) {
         this.currentPosition = 0;
         this.moveStrategy = initialMoveStrategy;
         System.out.println(this.moveStrategy.heroStatus());

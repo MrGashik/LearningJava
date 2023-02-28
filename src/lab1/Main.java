@@ -23,35 +23,19 @@ public class Main {
             mode = reader.nextInt();
 
             switch (mode) {
-                case 1:
-                    hero.changeStrategyMove(new StrategyStand());
-                    break;
-                case 2:
-                    hero.changeStrategyMove(new StrategySwim());
-                    break;
-                case 3:
-                    hero.changeStrategyMove(new StrategyWalk());
-                    break;
-                case 4:
-                    hero.changeStrategyMove(new StrategyRideAPony());
-                    break;
-                case 5:
-                    hero.changeStrategyMove(new StrategyRideAHorse());
-                    break;
-                case 6:
-                    hero.changeStrategyMove(new StrategyFly());
-                    break;
-                case 7:
-                    break;
-                default:
-                    System.out.println("The hero continues his movement in the designated mode.");
-                    break;
+                case 1 -> hero.changeStrategyMove(new StrategyStand());
+                case 2 -> hero.changeStrategyMove(new StrategySwim());
+                case 3 -> hero.changeStrategyMove(new StrategyWalk());
+                case 4 -> hero.changeStrategyMove(new StrategyRideAPony());
+                case 5 -> hero.changeStrategyMove(new StrategyRideAHorse());
+                case 6 -> hero.changeStrategyMove(new StrategyFly());
+                case 7 -> System.out.println("The hero has achieved his goal.");
+                default -> System.out.println("The hero continues his movement in the designated mode.");
             }
             if (mode != 7) {
                 hero.move();
             }
         }
-        System.out.println("The hero has achieved his goal.");
 
         reader.close();
     }
