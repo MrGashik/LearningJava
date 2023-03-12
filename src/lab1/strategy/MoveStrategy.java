@@ -1,6 +1,9 @@
 package lab1.strategy;
 
 public interface MoveStrategy {
-    int move();
+    default int move() {
+        return 0;
+    }
+
     String heroStatus();
 }
