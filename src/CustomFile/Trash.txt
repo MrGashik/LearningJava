@@ -1,0 +1,80 @@
+//jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//Toolkit toolkit = Toolkit.getDefaultToolkit();
+//Dimension dimension = toolkit.getScreenSize();
+//jFrame.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+//jFrame.setLocation((dimension.width - SCREEN_WIDTH) / 2, (dimension.height - SCREEN_HEIGHT) / 2);
+
+
+    private static final Font font16 = new Font("Times new roman", Font.BOLD, 16);
+    private static final Font font14 = new Font("Times new roman", Font.BOLD, 14);
+
+Метод для изменений расширения:
+    private static void createSetting(AtomicReference<Font> font, LabMode labMode, AtomicInteger deltaX, AtomicInteger deltaY) {
+        JFrame jExtensionFrame = new JFrame("Extension");
+        jExtensionFrame.getContentPane().setBackground(Color.BLACK);
+        jExtensionFrame.setLayout(null);
+        jExtensionFrame.setSize(300, 150);
+        jExtensionFrame.setLocation(0, 0);
+        jExtensionFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        String[] extension = {
+                "Fullscreen",
+                "1280x720",
+                "800x600"
+        };
+        JComboBox<String> jComboBox = new JComboBox<>(extension);
+        jComboBox.setBounds(45, 0, 200, 50);
+        jExtensionFrame.add(jComboBox);
+
+        JButton setButton = new JButton("Ok");
+        setButton.addActionListener(e -> {
+            JFrame jFrame = new JFrame("Lab7");
+            jFrame.getContentPane().setBackground(Color.BLACK);
+            jFrame.setLayout(null);
+            System.out.println(jComboBox.getItemAt(jComboBox.getSelectedIndex()));
+            switch (jComboBox.getItemAt(jComboBox.getSelectedIndex())) {
+                case "Fullscreen" -> {
+                    jFrame.setSize(1920, 1080);
+                    jFrame.setUndecorated(true);
+                    font.set(font18);
+                    deltaX.set(227);
+                    deltaY.set(270);
+                }
+                case "1280x720" -> {
+                    jFrame.setSize(1280, 720);
+                    jFrame.setLocation(
+                            (dimension.width - jFrame.getWidth()) / 2,
+                            (dimension.height - jFrame.getHeight()) / 2
+                    );
+                    jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    font.set(font16);
+                    deltaX.set(147);
+                    deltaY.set(180);
+                }
+                case "800x600" -> {
+                    jFrame.setSize(800, 600);
+                    jFrame.setLocation(
+                            (dimension.width - jFrame.getWidth()) / 2,
+                            (dimension.height - jFrame.getHeight()) / 2
+                    );
+                    jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    font.set(font14);
+                    deltaX.set(87);
+                    deltaY.set(150);
+                }
+            }
+            createMenu(jFrame, font.get(), labMode, deltaX.get(), deltaY.get());
+            jFrame.setVisible(true);
+            jExtensionFrame.setVisible(false);
+        });
+        setButton.setBounds(45, 50, 200, 50);
+        setButton.setBackground(Color.WHITE);
+        setButton.setBorder(BorderFactory.createLineBorder(Color.GRAY, 5));
+        setButton.setFont(font.get());
+        jExtensionFrame.add(setButton);
+        jExtensionFrame.setVisible(true);
+    }
+
+
+    "C:/Users/alexc/IdeaProjects/Lab1/src/CustomFile/dictionary1.txt"
+    "C:/Users/alexc/IdeaProjects/Lab1/src/CustomFile/dictionary2.txt"

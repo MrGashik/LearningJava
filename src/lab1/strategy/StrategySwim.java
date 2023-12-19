@@ -8,6 +8,6 @@ public class StrategySwim implements MoveStrategy {
 
     @Override
     public String heroStatus() {
-        return "The hero decided that it would be easier to swim on the ground... Well, he knows best.";
+        return "видит цель и не видит препятствий... Хорошо, что на берегу была лодка.";
     }
 }

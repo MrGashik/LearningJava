@@ -1,0 +1,16 @@
+Name - Имя
+my - мой
+my name is - меня зовут
+I - я
+I like - Мне нравится
+music - музыка
+Cat - кот
+She - она
+he - он
+go - идти
+have - имеет
+I am - я
+learning - изучаю
+English - английский
+listening to - слушать
+listening - прослушивание

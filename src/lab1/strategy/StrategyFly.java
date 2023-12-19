@@ -8,6 +8,6 @@ public class StrategyFly implements MoveStrategy {
 
     @Override
     public String heroStatus() {
-        return "The hero spread his wings and flew.";
+        return "расправил крылья и полетел.";
     }
 }

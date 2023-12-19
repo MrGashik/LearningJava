@@ -7,6 +7,6 @@ public class StrategyWalk implements MoveStrategy {
     }
     @Override
     public String heroStatus() {
-        return "The hero walks.";
+        return "walks.";
     }
 }

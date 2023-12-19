@@ -8,6 +8,6 @@ public class StrategyRideAHorse implements MoveStrategy {
 
     @Override
     public String heroStatus() {
-        return "The hero called his horse and saddled him.";
+        return "подозвал своего коня и оседлал его.";
     }
 }

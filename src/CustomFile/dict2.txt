@@ -1,0 +1,17 @@
+Name - Имя
+my name is - меня зовут
+I like - Мне нравится
+the quick - быстрый
+Brown - коричневый
+fox - лиса
+jump - прыжок
+Jumps - перепрыгивает
+Over - над
+The lazy - ленивый
+dog - собака
+music - музыка
+Cat - кот
+She - она
+he - он
+go - идти
+have - имеет
